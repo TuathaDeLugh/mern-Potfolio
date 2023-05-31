@@ -13,7 +13,7 @@ function Home ()  {
     const renderer = new THREE.WebGLRenderer({ canvas });
     const geometry = new THREE.BoxGeometry(1,1,1);
     
-    const matrial = new THREE.MeshBasicMaterial({color: 0x00ff00});
+    const matrial = new THREE.MeshBasicMaterial({color: 0xFF69B4});
       const mesh =  new THREE.Mesh(geometry,matrial);
       scene.add(mesh);
    
@@ -21,6 +21,8 @@ function Home ()  {
    
       const animate = () =>{
         requestAnimationFrame(animate);
+
+
         mesh.rotation.x += 0.01;
         mesh.rotation.y += 0.02;
         mesh.rotation.z += 0.03;
