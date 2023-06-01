@@ -20,6 +20,9 @@ import {
   SiMysql,
   SiSass,
   SiPhp,
+  SiTailwindcss,
+  SiBootstrap,
+  SiMui,
 } from "react-icons/si";
 
 
@@ -153,15 +156,17 @@ function Home ()  {
         <div className="homeSkillBox hs1" id='homeSkillBox1'>
           <SiHtml5 />
           <SiCss3 />
+          <SiTailwindcss/>
+          <SiBootstrap/>
           <SiSass/>
+          <SiMui/>
           <SiJavascript />
           <SiReact />
-          <SiTypescript/>
-          <SiThreedotjs /> 
                     
         </div>
         <div className="homeSkillBox hs2" id='homeSkillBox2'>
           
+          <SiTypescript/>
           <SiNextdotjs/>
           <SiNodedotjs />
           <SiExpress />
