@@ -94,8 +94,7 @@ function Home ()  {
       const animate = () =>{
         requestAnimationFrame(animate);
 
-        //venus.rotation.y += 0.001;
-        // earth.rotation.y += 0.001;
+        venus.rotation.y += 0.001;
         moon.rotation.y += 0.001;
         renderer.setSize((window.innerWidth),window.innerHeight);
          renderer.render(scene,camara);
