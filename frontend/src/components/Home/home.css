@@ -196,7 +196,7 @@
     margin: 10px;
   }
   .homeSkillBox > svg:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
   
   .homeYoutube {
