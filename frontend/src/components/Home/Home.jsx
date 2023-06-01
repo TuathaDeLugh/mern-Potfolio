@@ -1,14 +1,31 @@
 import React, { useEffect } from 'react';
 import * as THREE from "three";
 import { Typography } from "@mui/material";
-//import "./home.css";
+import "./home.css";
 import moonimage from "../../Images/moon.jpg" 
 import venusimage from "../../Images/venus.jpg" 
 import spaceimage from "../../Images/space.jpg";
-
+import {
+  SiReact,
+  SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
+  SiExpress,
+  SiCss3,
+  SiHtml5,
+  SiThreedotjs,
+  SiFirebase,
+  SiNextdotjs,
+  SiTypescript,
+  SiMysql,
+  SiSass,
+  SiPhp,
+} from "react-icons/si";
 
 
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+import TimeLine from '../TimeLine/TimeLine';
+
 function Home ()  {
   useEffect(()=>{
 
@@ -51,7 +68,7 @@ function Home ()  {
       pointLight2.position.set(-8, -5, -5);
       const lightheper = new THREE.PointLightHelper(pointlight);
 
-   // const control = new OrbitControls(camara,renderer.domElement);
+  //  const control = new OrbitControls(camara,renderer.domElement);
       scene.add(moon);
       scene.add(venus);
 
@@ -106,6 +123,54 @@ function Home ()  {
   return (
     <div className='home'>
       <canvas className='homeCanvas'></canvas>
+      <div className="homeContainer">
+      <Typography variant='h3'>TIMELINE</Typography>
+      <TimeLine timelines={[1,2,3,4]}/>
+      </div>
+      <div className="homeSkills">
+        <Typography variant='h3'>SKILLS</Typography>
+        <div className="homeCubeSkills">
+          <div className="homeCubeSkillsFaces homeCubeSkillsFace1">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" />
+          </div>
+          <div className="homeCubeSkillsFaces homeCubeSkillsFace2">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" />
+          </div>
+          <div className="homeCubeSkillsFaces homeCubeSkillsFace3">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" />
+          </div>
+          <div className="homeCubeSkillsFaces homeCubeSkillsFace4">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" />
+          </div>
+          <div className="homeCubeSkillsFaces homeCubeSkillsFace5">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" />
+          </div>
+          <div className="homeCubeSkillsFaces homeCubeSkillsFace6">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" />
+          </div>
+        </div>
+        <div className="cubeShadow"></div>
+        <div className="homeSkillBox hs1" id='homeSkillBox1'>
+          <SiHtml5 />
+          <SiCss3 />
+          <SiSass/>
+          <SiJavascript />
+          <SiReact />
+          <SiTypescript/>
+          <SiThreedotjs /> 
+                    
+        </div>
+        <div className="homeSkillBox hs2" id='homeSkillBox2'>
+          
+          <SiNextdotjs/>
+          <SiNodedotjs />
+          <SiExpress />
+          <SiMongodb />
+          <SiFirebase />
+          <SiMysql/>
+          <SiPhp/>        
+        </div>
+      </div>
     </div>
   );
 };

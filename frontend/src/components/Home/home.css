@@ -3,8 +3,8 @@
     max-width: 100%;
     height: 100vh;
     max-width: 100%;
-    filter: blur(10px);
-    position: absolute;
+    filter: blur(7px);
+    /* position: absolute; */
   }
   
   .homeCanvasContainer {
@@ -16,7 +16,7 @@
     color: white;
     display: flex;
   }
-  
+ 
   .homeCanvasContainer > h1 {
     filter: drop-shadow(0 0 2px rgb(28, 116, 216));
     position: absolute;
@@ -136,7 +136,7 @@
     position: absolute;
     width: inherit;
     height: inherit;
-    opacity: 0.7;
+    opacity: 1;
   }
   
   .homeCubeSkillsFaces > img {
@@ -172,25 +172,30 @@
     filter: blur(3px);
   }
   
-  .homeskillsBox {
+  .homeSkillBox {
     background-color: hsl(250, 100%, 75%);
     padding: 0 2vmax;
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: -300px;
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
   }
-  
-  .homeskillsBox > svg {
+  .hs1{
+    left: 0;
+  }
+  .hs2{
+    right: 0px;
+
+  }
+  .homeSkillBox > svg {
     font-size: 5vmax;
     color: rgb(255, 255, 255);
     transition: all 0.5s;
     margin: 10px;
   }
-  .homeskillsBox > svg:hover {
+  .homeSkillBox > svg:hover {
     transform: scale(1.5);
   }
   
@@ -295,4 +300,4 @@
     .homeCubeSkillsFace6 {
       transform: rotateX(-90deg) translate3d(0, 0, 75px);
     }
-  }
+  }  

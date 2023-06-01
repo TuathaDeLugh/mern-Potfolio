@@ -10,7 +10,7 @@ const Footer = () => {
       <div>
         <Typography variant="h5">About Me</Typography>
         <Typography>
-          Hey, my name is \Umang Sailor I am a Full-Stack Developer.
+          Hey, my name is Umang Sailor I am a Full-Stack Developer.
         </Typography>
 
         <Link to="/contact" className="footerContactBtn">
