@@ -4,7 +4,7 @@
     height: 100vh;
     max-width: 100%;
     filter: blur(7px);
-    /* position: absolute; */
+    position: absolute;
   }
   
   .homeCanvasContainer {
@@ -17,7 +17,7 @@
     display: flex;
   }
  
-  .homeCanvasContainer > h1 {
+  .homeCanvasContainer > h2 {
     filter: drop-shadow(0 0 2px rgb(28, 116, 216));
     position: absolute;
     top: 50%;
@@ -26,13 +26,13 @@
     padding: 2vmax;
     transform: translate(0%, -50%);
     text-align: center;
-    font: 700 4vmax "Josefin Sans", sans-serif;
+    font: 700 2.6vmax "Josefin Sans", sans-serif;
   }
-  .homeCanvasContainer > h1 > p {
+  .homeCanvasContainer > h2 > p {
     transition: all 0.5s;
     color: rgb(36, 36, 36);
   }
-  .homeCanvasContainer > h1 > p:hover {
+  .homeCanvasContainer > h2 > p:hover {
     transform: translateY(-10px);
   }
   

@@ -29,6 +29,8 @@ import {
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import TimeLine from '../TimeLine/TimeLine';
 import YoutubeCard from '../YoutubeCard/YoutubeCard';
+import { MouseOutlined } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 function Home ()  {
   useEffect(()=>{
@@ -145,7 +147,36 @@ function Home ()  {
   return (
     <div className='home'>
       <canvas className='homeCanvas'></canvas>
+      <div className="homeCanvasContainer">
+        <Typography variant="h2">
+          <p>U</p>
+          <p>M</p>
+          <p>A</p>
+          <p>N</p>
+          <p>G</p>
+          <p>S</p>
+          <p>A</p>
+          <p>I</p>
+          <p>L</p>
+          <p>O</p>
+          <p>R</p>
+        </Typography>
+
+        <div className="homeCanvasBox">
+        <Typography variant="h2">WEB</Typography>
+          <Typography variant="h2">DESIGNER</Typography>
+          <Typography variant="h2">DEVELOPER</Typography>
+          <Typography variant="h2">//GAMER</Typography>
+        </div>
+
+        <Link to="/projects">VIEW WORK</Link>
+      </div>
+
+      <div className="homeScrollBtn">
+        <MouseOutlined />
+      </div>
       <div className="homeContainer">
+
       <Typography variant='h3'>TIMELINE</Typography>
       <TimeLine timelines={[1,2,3,4]}/>
       </div>
