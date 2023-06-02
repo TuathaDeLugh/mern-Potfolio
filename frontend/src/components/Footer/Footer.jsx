@@ -10,7 +10,7 @@ const Footer = () => {
       <div>
         <Typography variant="h5">About Me</Typography>
         <Typography>
-          Hey, my name is Umang Sailor I am a Full-Stack Developer.
+          Hey, my name is Umang Sailor I am a Full-Stack Developer and FPS gamer.
         </Typography>
 
         <Link to="/contact" className="footerContactBtn">
@@ -22,7 +22,7 @@ const Footer = () => {
         <a href="https://github.com/Tuathadelugh" target="black">
           <BsGithub />
         </a>
-        <a href="https://youtube.com" target="black">
+        <a href="https://youtube.com/@sail0r" target="black">
           <BsYoutube />
         </a>
         <a href="https://instagram.com/umang_sailor" target="black">

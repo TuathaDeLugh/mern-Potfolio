@@ -172,7 +172,7 @@
     filter: blur(3px);
   }
   
-  .homeSkillBox {
+  .homeSkillBox1 {
     background-color: hsl(250, 100%, 75%);
     padding: 0 2vmax;
     position: absolute;
@@ -181,14 +181,21 @@
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+    left: -300px;
   }
-  .hs1{
-    left: 0;
+  .homeSkillBox2 {
+    background-color: hsl(250, 100%, 75%);
+    padding: 0 2vmax;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    right: -300px;
+    
   }
-  .hs2{
-    right: 0px;
 
-  }
   .homeSkillBox > svg {
     font-size: 5vmax;
     color: rgb(255, 255, 255);
@@ -203,7 +210,7 @@
     background-color: white;
     padding-top: 4vmax;
     transform: translateY(-200px);
-    border-radius: 20% 20% 0 0;
+    border-radius: 200px 200px 0 0;
     position: relative;
     margin-bottom: -200px;
     box-sizing: border-box;
@@ -241,24 +248,43 @@
     }
   }
   
-  @keyframes homeskillsBoxAnimationOn {
+  @keyframes homeskillsBox2AnimationOn {
     from {
       right: -300px;
     }
     to {
-      right: 40px;
+      right: 0px;
     }
   }
   
-  @keyframes homeskillsBoxAnimationOff {
+  @keyframes homeskillsBox2AnimationOff {
     from {
-      right: 40px;
+      right: 0px;
     }
     to {
       right: -300px;
     }
   }
+ 
+  @keyframes homeskillsBox1AnimationOn {
+    from {
+      left: -300px;
+    }
+    to {
+      left: 0px;
+    }
+  }
   
+  @keyframes homeskillsBox1AnimationOff {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -300px;
+    }
+  }
+  
+
   @keyframes scrollPop {
     to {
       transform: translateY(-200%);
@@ -281,7 +307,9 @@
       width: 100px;
       height: 100px;
     }
-  
+    .homeSkillBox1,.homeSkillBox2 {
+      background-color: transparent;
+    }
     .homeCubeSkillsFace1 {
       transform: translate3d(0, 0, 75px);
     }

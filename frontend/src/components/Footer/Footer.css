@@ -39,7 +39,7 @@
   color: rgb(241, 59, 59);
 }
 .footer > div > a:nth-child(4):hover {
-  color: rgb(119, 61, 212);
+  color: rgb(219, 19, 186);
 }
 .footer > div > a:nth-child(5):hover {
   color: rgb(64, 88, 226);
@@ -47,6 +47,7 @@
 
 .footerContactBtn {
   background-color: white;
+  border-radius: 6px;
   color: black;
   padding: 5px;
   width: 120px;

@@ -28,6 +28,7 @@ import {
 
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import TimeLine from '../TimeLine/TimeLine';
+import YoutubeCard from '../YoutubeCard/YoutubeCard';
 
 function Home ()  {
   useEffect(()=>{
@@ -121,6 +122,24 @@ function Home ()  {
       }
       animate();
 
+      return window.addEventListener("scroll", () => {
+        camara.rotation.z = window.scrollY * 0.001;
+        camara.rotation.y = window.scrollY * 0.003;
+  
+        const skillBox1 = document.getElementById("homeSkillBox1");
+        const skillBox2 = document.getElementById("homeSkillBox2");
+
+  
+        if (window.scrollY > 1500) {
+          skillBox1.style.animationName = "homeskillsBox1AnimationOn";
+          skillBox2.style.animationName = "homeskillsBox2AnimationOn";
+
+        } else {
+          skillBox1.style.animationName = "homeskillsBox1AnimationOff";
+          skillBox2.style.animationName = "homeskillsBox2AnimationOff";
+
+        }
+      });
 
   },[]);
   return (
@@ -153,7 +172,7 @@ function Home ()  {
           </div>
         </div>
         <div className="cubeShadow"></div>
-        <div className="homeSkillBox hs1" id='homeSkillBox1'>
+        <div className="homeSkillBox homeSkillBox1" id='homeSkillBox1'>
           <SiHtml5 />
           <SiCss3 />
           <SiTailwindcss/>
@@ -164,7 +183,7 @@ function Home ()  {
           <SiReact />
                     
         </div>
-        <div className="homeSkillBox hs2" id='homeSkillBox2'>
+        <div className="homeSkillBox homeSkillBox2 " id='homeSkillBox2'>
           
           <SiTypescript/>
           <SiNextdotjs/>
@@ -175,6 +194,26 @@ function Home ()  {
           <SiMysql/>
           <SiPhp/>        
         </div>
+      </div>
+
+      <div className="homeYoutube">
+      <Typography variant='h3'>YOUTUBE VIDEOS</Typography>
+      <div className="homeYoutubeWrapper">
+      <YoutubeCard
+      image="{item.image.url}"
+      title="{item.title}"
+      url="{item.url}"
+      id="{item._id}"
+      key="{item._id}"/>
+      <YoutubeCard
+      image="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"/>
+      <YoutubeCard/>
+      <YoutubeCard/>
+      <YoutubeCard/>
+      <YoutubeCard/>
+      <YoutubeCard/>
+
+      </div>
       </div>
     </div>
   );
