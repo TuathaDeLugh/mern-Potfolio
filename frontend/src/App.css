@@ -3,3 +3,22 @@
   margin: 0;
   padding: 0;
 }
+::-moz-selection { 
+  background: rgb(149, 207, 255);
+}
+
+::selection {
+  background: rgb(149, 207, 255);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track { 
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4c4c; 
+}
