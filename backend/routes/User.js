@@ -1,5 +1,5 @@
 import  express  from "express";
-import { getUser, login, logout, myProfile } from "../controller/User.js";
+import { contact, getUser, login, logout, myProfile, updateUser } from "../controller/User.js";
 import { isAuthenticated } from "../middlewares/auth.js";
 
 
@@ -9,4 +9,7 @@ userRouter.route("/login").post(login);
 userRouter.route("/logout").get(logout);
 userRouter.route("/user").get(getUser);
 userRouter.route("/me").get(isAuthenticated,myProfile);
+userRouter.route("/contact").post(contact);
+userRouter.route("/admin/update").put(isAuthenticated,updateUser);
+
 

@@ -99,3 +99,19 @@ export const contact = async(req,res)=>{
         })
     }
 }
+
+export const updateUser = async(req,res)=>{
+    try{
+        const user = await user.findByID(req.user._id);
+        res.status(200).json({
+            success: true,
+            user,
+        })
+    }
+    catch(error){
+        return res.status(400).json({
+            success:false,
+            message: error.message,
+        })
+    }
+}
